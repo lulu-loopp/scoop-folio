@@ -1,0 +1,46 @@
+{
+    "version": "0.4.2",
+    "description": "Terminal that typesets formulas where a command prints them, with files previewed beside the prompt",
+    "homepage": "https://github.com/lulu-loopp/folio-terminal",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v0.4.2-preview/folio-0.4.2-windows-x64.zip",
+            "hash": "7e8dc605cc9c2a0a2718e2ddceedca8eacdc531460714d5cb516840546d3e079",
+            "extract_dir": "folio-0.4.2"
+        }
+    },
+    "bin": "folio.exe",
+    "shortcuts": [
+        [
+            "folio.exe",
+            "Folio"
+        ]
+    ],
+    "notes": [
+        "The Explorer right-click entry (\"Open in Folio\") is switched on from inside Folio:",
+        "the first-run card, or Settings > General. Scoop does not set it up.",
+        "Before 'scoop uninstall folio', switch it off there so the classic menu entry goes too;",
+        "the Windows 11 first-page entry is removed by the uninstall itself."
+    ],
+    "pre_uninstall": [
+        "Get-AppxPackage -Name 'WeiyiShi.Folio' -ErrorAction SilentlyContinue | Remove-AppxPackage -ErrorAction SilentlyContinue"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/lulu-loopp/folio-terminal/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)-preview"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v$version-preview/folio-$version-windows-x64.zip",
+                "extract_dir": "folio-$version",
+                "hash": {
+                    "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v$version-preview/SHA256SUMS.txt",
+                    "regex": "([a-fA-F0-9]{64})\\s+$basename"
+                }
+            }
+        }
+    }
+}
