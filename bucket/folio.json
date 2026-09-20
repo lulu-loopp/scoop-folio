@@ -19,12 +19,8 @@
     ],
     "notes": [
         "The Explorer right-click entry (\"Open in Folio\") is switched on from inside Folio:",
-        "the first-run card, or Settings > General. Scoop does not set it up.",
-        "Before 'scoop uninstall folio', switch it off there so the classic menu entry goes too;",
-        "the Windows 11 first-page entry is removed by the uninstall itself."
-    ],
-    "pre_uninstall": [
-        "Get-AppxPackage -Name 'WeiyiShi.Folio' -ErrorAction SilentlyContinue | Remove-AppxPackage -ErrorAction SilentlyContinue"
+        "the first-run card, or Settings > General. Scoop does not set it up, and it keeps working across 'scoop update'.",
+        "Before 'scoop uninstall folio', switch it off in Settings so the menu entry is removed too."
     ],
     "checkver": {
         "url": "https://api.github.com/repos/lulu-loopp/folio-terminal/releases/latest",
