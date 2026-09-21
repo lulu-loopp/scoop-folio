@@ -1,13 +1,13 @@
 {
-    "version": "0.4.2",
+    "version": "0.4.3",
     "description": "Terminal that typesets formulas where a command prints them, with files previewed beside the prompt",
     "homepage": "https://github.com/lulu-loopp/folio-terminal",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v0.4.2-preview/folio-0.4.2-windows-x64.zip",
-            "hash": "7e8dc605cc9c2a0a2718e2ddceedca8eacdc531460714d5cb516840546d3e079",
-            "extract_dir": "folio-0.4.2"
+            "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v0.4.3-preview/folio-0.4.3-windows-x64.zip",
+            "hash": "3ed45c648304be9734ad6130a5075c3a63ede8d6dd5cbb487774fe85cb45cf19",
+            "extract_dir": "folio-0.4.3"
         }
     },
     "bin": "folio.exe",
