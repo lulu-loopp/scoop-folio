@@ -4,15 +4,15 @@
         "post_install writes folio-install.json, the install channel marker Folio reads at start: this copy is scoop's, and scoop runs Folio's cleanup when it uninstalls it. scoop runs post_install at every install and update, into the new version folder, so every version folder carries its own marker.",
         "pre_uninstall runs 'folio --uninstall-cleanup' on 'scoop uninstall' only. scoop also runs pre_uninstall on 'scoop update', and the cleanup removes what Folio set up outside its folder (the right-click menu, agent hooks, the PowerShell profile line), which an update must keep; $cmd is scoop's own name for the command being run. Exit 2 means a Folio is running and nothing was changed: the hook throws, and scoop stops with the app intact. Exit 1 means one removal was refused: the uninstall goes on, and the lines above say what stayed."
     ],
-    "version": "0.4.6",
+    "version": "0.4.7",
     "description": "Terminal that typesets formulas where a command prints them, with files previewed beside the prompt",
     "homepage": "https://github.com/lulu-loopp/folio-terminal",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v0.4.6-preview/folio-0.4.6-windows-x64.zip",
-            "hash": "1370d289e7a6a79a3e30cf14443f135ca0a5e150e3db2c457dfd1441772c354b",
-            "extract_dir": "folio-0.4.6"
+            "url": "https://github.com/lulu-loopp/folio-terminal/releases/download/v0.4.7-preview/folio-0.4.7-windows-x64.zip",
+            "hash": "a2d48c81b66b474d6e9d4ac010bb48c36712396d140102e579579dca4d609dad",
+            "extract_dir": "folio-0.4.7"
         }
     },
     "bin": "folio.exe",
